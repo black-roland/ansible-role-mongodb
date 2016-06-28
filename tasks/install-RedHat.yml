@@ -1,0 +1,8 @@
+---
+
+- name: Install Software Collections
+  yum: name=centos-release-scl state=latest
+
+- name: Install MongoDB packages
+  yum: name="{{ item }}" state=latest
+  with_items: "{{ mongodb_packages }}"

@@ -1,0 +1,4 @@
+---
+
+mongodb_packages:
+  - "rh-mongodb{{ mongodb_version | regex_replace('[^0-9]', '') }}"
