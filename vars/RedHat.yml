@@ -1,4 +1,10 @@
 ---
 
+mongodb_mongod_conf_path: /etc/opt/rh/rh-mongodb32/mongod.conf
+mongodb_service: rh-mongodb32-mongod
 mongodb_packages:
   - "rh-mongodb{{ mongodb_version | regex_replace('[^0-9]', '') }}"
+
+mongodb_systemLog_path: /var/opt/rh/rh-mongodb32/log/mongodb/mongod.log
+mongodb_net_unixDomainSocket_pathPrefix: /var/opt/rh/rh-mongodb32/run/mongodb
+mongodb_storage_dbPath: /var/opt/rh/rh-mongodb32/lib/mongodb

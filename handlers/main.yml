@@ -1,0 +1,4 @@
+---
+
+- name: mongod restart
+  service: name="{{ mongodb_service }}" state=restarted enabled=yes

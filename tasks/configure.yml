@@ -1,0 +1,5 @@
+---
+
+- name: Configure mongod
+  template: src=mongod.conf.j2 dest="{{ mongodb_mongod_conf_path }}"
+  notify: mongod restart
